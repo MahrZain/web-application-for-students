@@ -1,0 +1,18 @@
+{% load static %}
+{% include 'header.html' %}
+
+<h1>Posts</h1>
+<div>
+    {% for post in posts %}
+    <div class="post">
+        <h2>{{ post.title }}</h2>
+        <div>
+            {{ post.content|safe }}  <!-- Show post content as HTML -->
+        </div>
+        <p>Created on: {{ post.created_at }}</p>
+    </div>
+    {% endfor %}
+</div>
+
+
+{% include 'footer.html'%}
