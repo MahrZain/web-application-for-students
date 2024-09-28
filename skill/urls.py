@@ -16,4 +16,5 @@ urlpatterns = [
     path('Subjects/<slug:slug>/', views.subject_detail, name='subject_detail'),
     path('Subjects/<slug:slug>/chapters/', views.subject_chapters, name='subject_chapters'),  
     path('chapters/', include('chapters.urls')), 
+    path('tinymce/', include('tinymce.urls')),
     ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -9,7 +9,6 @@ from subjects.models import Subjects
 from category.models import Category
 from chapters.models import Chapter,Exercise
 
-
 def home(request):
     card = Card.objects.all()
     carousel = Carousel.objects.all()
@@ -65,3 +64,6 @@ def subject_chapters(request, slug):
         'chapters': chapters,
     }
     return render(request, 'chapters.html', context)
+
+
+
